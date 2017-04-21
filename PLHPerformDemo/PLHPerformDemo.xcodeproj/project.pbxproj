@@ -15,6 +15,8 @@
 		1C726D3F1EA21E3400A36893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C726D3D1EA21E3400A36893 /* LaunchScreen.storyboard */; };
 		1C726D4B1EA2207900A36893 /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C726D4A1EA2207900A36893 /* RootTableViewController.m */; };
 		1C726D4E1EA2448800A36893 /* PerformSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C726D4D1EA2448800A36893 /* PerformSelectorViewController.m */; };
+		1CB50DB31EA301D500D0A5D3 /* PerformSelectorThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB50DB21EA301D500D0A5D3 /* PerformSelectorThreadViewController.m */; };
+		1CB50DB61EA309C900D0A5D3 /* PerformSelectorNoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB50DB51EA309C900D0A5D3 /* PerformSelectorNoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		1C726D4A1EA2207900A36893 /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		1C726D4C1EA2448800A36893 /* PerformSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSelectorViewController.h; sourceTree = "<group>"; };
 		1C726D4D1EA2448800A36893 /* PerformSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSelectorViewController.m; sourceTree = "<group>"; };
+		1CB50DB11EA301D500D0A5D3 /* PerformSelectorThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerformSelectorThreadViewController.h; path = ../PerformSelectorThreadViewController.h; sourceTree = "<group>"; };
+		1CB50DB21EA301D500D0A5D3 /* PerformSelectorThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerformSelectorThreadViewController.m; path = ../PerformSelectorThreadViewController.m; sourceTree = "<group>"; };
+		1CB50DB41EA309C900D0A5D3 /* PerformSelectorNoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformSelectorNoViewController.h; sourceTree = "<group>"; };
+		1CB50DB51EA309C900D0A5D3 /* PerformSelectorNoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformSelectorNoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 				1C726D4A1EA2207900A36893 /* RootTableViewController.m */,
 				1C726D4C1EA2448800A36893 /* PerformSelectorViewController.h */,
 				1C726D4D1EA2448800A36893 /* PerformSelectorViewController.m */,
+				1CB50DB11EA301D500D0A5D3 /* PerformSelectorThreadViewController.h */,
+				1CB50DB21EA301D500D0A5D3 /* PerformSelectorThreadViewController.m */,
+				1CB50DB41EA309C900D0A5D3 /* PerformSelectorNoViewController.h */,
+				1CB50DB51EA309C900D0A5D3 /* PerformSelectorNoViewController.m */,
 			);
 			path = PLHPerformDemo;
 			sourceTree = "<group>";
@@ -161,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C726D371EA21E3400A36893 /* ViewController.m in Sources */,
+				1CB50DB31EA301D500D0A5D3 /* PerformSelectorThreadViewController.m in Sources */,
 				1C726D341EA21E3400A36893 /* AppDelegate.m in Sources */,
+				1CB50DB61EA309C900D0A5D3 /* PerformSelectorNoViewController.m in Sources */,
 				1C726D4E1EA2448800A36893 /* PerformSelectorViewController.m in Sources */,
 				1C726D311EA21E3400A36893 /* main.m in Sources */,
 				1C726D4B1EA2207900A36893 /* RootTableViewController.m in Sources */,
@@ -319,6 +331,7 @@
 				1C726D451EA21E3400A36893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
