@@ -61,9 +61,9 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self performSelector:@selector(delayMethod) withObject:nil];
     });
-    NSLog(@"异步全局队列中无延迟调用selector方法开始");
+    NSLog(@"异步全局队列子线程中无延迟调用selector方法开始");
     sleep(5);
-    NSLog(@"异步全局队列中无延迟调用selector方法结束");
+    NSLog(@"异步全局队列子线程中无延迟调用selector方法结束");
 }
 
 

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SecondViewController.h"
 @interface ViewController ()
 
 @end
@@ -17,32 +17,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSLog(@"对于6s屏幕的self.view.frame = %@,self.view.bounds=%@",NSStringFromCGRect(self.view.frame),NSStringFromCGRect(self.view.bounds));
-    //对于6s屏幕的self.view.frame = {{0, 0}, {375, 667}},self.view.bounds={{0, 0}, {375, 667}}
-    
-#pragma mark --   例子1
-    //旋转一个自定义view后，frame改变了，而bounds没有改变
-    UIView *View1 = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 50,50)];
-    View1.backgroundColor = [UIColor redColor];
-    [self.view addSubview:View1];
-    NSLog(@"自定义子view的self.view.frame = %@",NSStringFromCGRect(View1.frame));
-    //自定义子view的self.view.frame = {{100, 100}, {50, 50}}
-    NSLog(@"自定义子view的self.view.bounds=%@",NSStringFromCGRect(View1.bounds));
-    //自定义子view的self.view.bounds={{0, 0}, {50, 50}}
-
-    [UIView transitionWithView:View1 duration:2 options:0 animations:^{
-        View1.transform = CGAffineTransformMakeRotation(M_PI_4);
-    }completion:^(BOOL finished){
-    if (finished)
-        {
-            NSLog(@"旋转后子view的self.view.frame = %@",NSStringFromCGRect(View1.frame));
-            //旋转后子view的self.view.frame = {{89.644660940672622, 89.644660940672622}, {70.710678118654755, 70.710678118654755}}
-
-            NSLog(@"旋转后子view的self.view.bounds=%@",NSStringFromCGRect(View1.bounds));
-            //旋转后子view的self.view.bounds={{0, 0}, {50, 50}}
-        }
-    }];
+    [self buttonView];
+//    NSLog(@"对于6s屏幕的self.view.frame = %@,self.view.bounds=%@",NSStringFromCGRect(self.view.frame),NSStringFromCGRect(self.view.bounds));
+//    //对于6s屏幕的self.view.frame = {{0, 0}, {375, 667}},self.view.bounds={{0, 0}, {375, 667}}
+//    
+//#pragma mark --   例子1
+//    //旋转一个自定义view后，frame改变了，而bounds没有改变
+//    UIView *View1 = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 50,50)];
+//    View1.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:View1];
+//    NSLog(@"自定义子view的self.view.frame = %@",NSStringFromCGRect(View1.frame));
+//    //自定义子view的self.view.frame = {{100, 100}, {50, 50}}
+//    NSLog(@"自定义子view的self.view.bounds=%@",NSStringFromCGRect(View1.bounds));
+//    //自定义子view的self.view.bounds={{0, 0}, {50, 50}}
+//
+//    [UIView transitionWithView:View1 duration:2 options:0 animations:^{
+//        View1.transform = CGAffineTransformMakeRotation(M_PI_4);
+//    }completion:^(BOOL finished){
+//    if (finished)
+//        {
+//            NSLog(@"旋转后子view的self.view.frame = %@",NSStringFromCGRect(View1.frame));
+//            //旋转后子view的self.view.frame = {{89.644660940672622, 89.644660940672622}, {70.710678118654755, 70.710678118654755}}
+//
+//            NSLog(@"旋转后子view的self.view.bounds=%@",NSStringFromCGRect(View1.bounds));
+//            //旋转后子view的self.view.bounds={{0, 0}, {50, 50}}
+//        }
+//    }];
  
 #pragma mark --例子2
     //我们把一个子View放到父View中
@@ -61,89 +61,89 @@
     //子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
     
     
-    //1. 改变父View的bounds的位置,父view的bounds改变了
-    [UIView animateWithDuration:4 animations:^{
-        [fatherView setBounds:CGRectMake(30, 30, 200, 200)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变父坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        // 改变父坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{30, 30}, {200, 200}},中心点=：{200, 200}
-
-        NSLog(@"改变父坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变父坐标bounds的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
-    }];
-
-    
-    //2. 改变父View的bounds的大小,父view的frame和bounds都改变了
-    [UIView animateWithDuration:4 animations:^{
-        [fatherView setBounds:CGRectMake(100, 100, 100, 100)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变父坐标bounds的大小后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        //改变父坐标bounds的大小后父view的frame = {{150, 150}, {100, 100}},bounds={{100, 100}, {100, 100}},中心点=：{200, 200}
-
-        NSLog(@"改变父坐标bounds的大小后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变父坐标bounds的大小后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
-    }];
+//    //1. 改变父View的bounds的位置,父view的bounds改变了
+//    [UIView animateWithDuration:4 animations:^{
+//        [fatherView setBounds:CGRectMake(30, 30, 200, 200)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变父坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        // 改变父坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{30, 30}, {200, 200}},中心点=：{200, 200}
+//
+//        NSLog(@"改变父坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变父坐标bounds的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
+//    }];
 
     
-  // 3. 修改子视图的bounds的位置,子view的bounds改变了。
-    [UIView animateWithDuration:4 animations:^{
-        [sunView setBounds:CGRectMake(30, 30, 50, 50)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变子坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        //改变子坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
-        
-        NSLog(@"改变子坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变子坐标bounds的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{30, 30}, {50, 50}},中心点=：{25, 25}
-    }];
+//    //2. 改变父View的bounds的大小,父view的frame和bounds都改变了
+//    [UIView animateWithDuration:4 animations:^{
+//        [fatherView setBounds:CGRectMake(0, 0,100, 100)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变父坐标bounds的大小后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        //改变父坐标bounds的大小后父view的frame = {{150, 150}, {100, 100}},bounds={{0, 0}, {100, 100}},中心点=：{200, 200}
+//
+//        NSLog(@"改变父坐标bounds的大小后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变父坐标bounds的大小后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
+//    }];
+
     
+  // 3. 修改子视图的bounds的位置,子view的bounds改变了。但是图像并没有改变
+//    [UIView animateWithDuration:4 animations:^{
+//        [sunView setBounds:CGRectMake(-30, -30, 50, 50)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变子坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        //改变子坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
+//        
+//        NSLog(@"改变子坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变子坐标bounds的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{30, 30}, {50, 50}},中心点=：{25, 25}
+//    }];
+
  // 4. 修改子视图的bounds的大小,子view的frame,bounds改变了
-    [UIView animateWithDuration:4 animations:^{
-        [sunView setBounds:CGRectMake(0, 0, 80, 80)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变子坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        //改变子坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
-        
-        NSLog(@"改变子坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变子坐标bounds的位置后子view的frame = {{-15, -15}, {80, 80}},bounds={{0, 0}, {80, 80}},中心点=：{25, 25}
-
-    }];
+//    [UIView animateWithDuration:4 animations:^{
+//        [sunView setBounds:CGRectMake(0, 0, 80, 80)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变子坐标bounds的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        //改变子坐标bounds的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
+//        
+//        NSLog(@"改变子坐标bounds的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变子坐标bounds的位置后子view的frame = {{-15, -15}, {80, 80}},bounds={{0, 0}, {80, 80}},中心点=：{25, 25}
+//
+//    }];
 
     
-    
+
     //改变父view的frame的位置,父view的frame改变了，中心点改变了
-    [UIView animateWithDuration:5 animations:^{
-        [fatherView setFrame:CGRectMake(30, 30, 200, 200)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变父坐标frame的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        //变父坐标frame的位置后父view的frame = {{30, 30}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{130, 130}
-        
-        NSLog(@"改变父坐标frame的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变父坐标frame的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
-    }];
+//    [UIView animateWithDuration:5 animations:^{
+//        [fatherView setFrame:CGRectMake(30, 30, 200, 200)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变父坐标frame的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        //变父坐标frame的位置后父view的frame = {{30, 30}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{130, 130}
+//        
+//        NSLog(@"改变父坐标frame的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变父坐标frame的位置后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
+//    }];
 
     //改变父view的frame的大小,父view的bounds，frame，和中心点都改变了
-    [UIView animateWithDuration:5 animations:^{
-        [fatherView setFrame:CGRectMake(100,100,100,100)];
-    }completion:^(BOOL finished){
-        NSLog(@"改变父坐标frame的大小后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-        //改变父坐标frame的大小后父view的frame = {{100, 100}, {100, 100}},bounds={{0, 0}, {100, 100}},中心点=：{150, 150}
-        
-        NSLog(@"改变父坐标frame的大小后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-        //改变父坐标frame的大小后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
-    }];
-
+//    [UIView animateWithDuration:5 animations:^{
+//        [fatherView setFrame:CGRectMake(0,0,100,100)];
+//    }completion:^(BOOL finished){
+//        NSLog(@"改变父坐标frame的大小后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//        //改变父坐标frame的大小后父view的frame = {{100, 100}, {100, 100}},bounds={{0, 0}, {100, 100}},中心点=：{150, 150}
+//        
+//        NSLog(@"改变父坐标frame的大小后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//        //改变父坐标frame的大小后子view的frame = {{0, 0}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{25, 25}
+//    }];
+//
     // 修改子视图的frame的位置,子view的frame，中心点改变了。
-        [UIView animateWithDuration:4 animations:^{
-            [sunView setFrame:CGRectMake(30, 30, 50, 50)];
-        }completion:^(BOOL finished){
-            NSLog(@"改变子坐标frame的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
-            //改变子坐标frame的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
-    
-            NSLog(@"改变子坐标frame的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
-            //改变子坐标frame的位置后子view的frame = {{30, 30}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{55, 55}
-
-        }];
-    
+//        [UIView animateWithDuration:4 animations:^{
+//            [sunView setFrame:CGRectMake(30, 30, 50, 50)];
+//        }completion:^(BOOL finished){
+//            NSLog(@"改变子坐标frame的位置后父view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(fatherView.frame),NSStringFromCGRect(fatherView.bounds),NSStringFromCGPoint(fatherView.center));
+//            //改变子坐标frame的位置后父view的frame = {{100, 100}, {200, 200}},bounds={{0, 0}, {200, 200}},中心点=：{200, 200}
+//    
+//            NSLog(@"改变子坐标frame的位置后子view的frame = %@,bounds=%@,中心点=：%@",NSStringFromCGRect(sunView.frame),NSStringFromCGRect(sunView.bounds),NSStringFromCGPoint(sunView.center));
+//            //改变子坐标frame的位置后子view的frame = {{30, 30}, {50, 50}},bounds={{0, 0}, {50, 50}},中心点=：{55, 55}
+//
+//        }];
+//
     // 修改子视图的bounds的大小,子view的frame,bounds,中心点改变了
         [UIView animateWithDuration:4 animations:^{
             [sunView setFrame:CGRectMake(0, 0, 80, 80)];
@@ -155,7 +155,7 @@
             //改变子坐标frame的位置后子view的frame = {{0, 0}, {80, 80}},bounds={{0, 0}, {80, 80}},中心点=：{40, 40}
     
         }];
-    
+
 }
 
 
@@ -183,5 +183,20 @@
  想修改viewA的所有子view的位置，修改viewA的bounds的位置（该父容器的坐标）。
  */
 
-
+-(void)buttonView{
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 390, 50, 50)];
+    btn.backgroundColor = [UIColor grayColor];
+    btn.titleLabel.text=@"bounds的应用";
+    btn.titleLabel.font = [UIFont systemFontOfSize:13];
+    
+    
+    [btn addTarget:self action:@selector(ClickEvent) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
+}
+-(void)ClickEvent{
+    SecondViewController *vb = [[SecondViewController alloc]init];
+    [self presentViewController:vb animated:YES completion:nil];
+}
 @end

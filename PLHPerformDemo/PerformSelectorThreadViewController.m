@@ -91,9 +91,9 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self performSelector:@selector(delayMethod) withObject:nil];
     });
-    NSLog(@"在GCD延时执行selector方法开始调用");
+    NSLog(@"在GCD主线程延时执行selector方法开始调用");
     sleep(5);
-    NSLog(@"在GCD延时执行selector方法结束调用");
+    NSLog(@"在GCD主线程延时执行selector方法结束调用");
 }
 
 #pragma mark -delayMethod

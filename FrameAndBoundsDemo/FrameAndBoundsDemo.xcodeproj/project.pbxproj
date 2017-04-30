@@ -13,6 +13,11 @@
 		1C331C241EA9D19B001D6077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C221EA9D19B001D6077 /* Main.storyboard */; };
 		1C331C261EA9D19B001D6077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C251EA9D19B001D6077 /* Assets.xcassets */; };
 		1C331C291EA9D19C001D6077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C271EA9D19C001D6077 /* LaunchScreen.storyboard */; };
+		1C331C321EAB15C2001D6077 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C331C311EAB15C2001D6077 /* SecondViewController.m */; };
+		1C331C341EAB2408001D6077 /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C331EAB2408001D6077 /* 1.JPG */; };
+		1C331C361EAB279E001D6077 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C351EAB279E001D6077 /* 1.png */; };
+		1C331C381EAB27A5001D6077 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C371EAB27A5001D6077 /* 2.png */; };
+		1C331C3A1EAB27AB001D6077 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C331C391EAB27AB001D6077 /* 3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,12 @@
 		1C331C251EA9D19B001D6077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C331C281EA9D19C001D6077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C331C2A1EA9D19C001D6077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C331C301EAB15C2001D6077 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1C331C311EAB15C2001D6077 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		1C331C331EAB2408001D6077 /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
+		1C331C351EAB279E001D6077 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		1C331C371EAB27A5001D6077 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		1C331C391EAB27AB001D6077 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,12 @@
 				1C331C1D1EA9D19B001D6077 /* AppDelegate.m */,
 				1C331C1F1EA9D19B001D6077 /* ViewController.h */,
 				1C331C201EA9D19B001D6077 /* ViewController.m */,
+				1C331C301EAB15C2001D6077 /* SecondViewController.h */,
+				1C331C311EAB15C2001D6077 /* SecondViewController.m */,
+				1C331C351EAB279E001D6077 /* 1.png */,
+				1C331C371EAB27A5001D6077 /* 2.png */,
+				1C331C391EAB27AB001D6077 /* 3.png */,
+				1C331C331EAB2408001D6077 /* 1.JPG */,
 				1C331C221EA9D19B001D6077 /* Main.storyboard */,
 				1C331C251EA9D19B001D6077 /* Assets.xcassets */,
 				1C331C271EA9D19C001D6077 /* LaunchScreen.storyboard */,
@@ -137,9 +154,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C331C381EAB27A5001D6077 /* 2.png in Resources */,
 				1C331C291EA9D19C001D6077 /* LaunchScreen.storyboard in Resources */,
+				1C331C341EAB2408001D6077 /* 1.JPG in Resources */,
 				1C331C261EA9D19B001D6077 /* Assets.xcassets in Resources */,
 				1C331C241EA9D19B001D6077 /* Main.storyboard in Resources */,
+				1C331C3A1EAB27AB001D6077 /* 3.png in Resources */,
+				1C331C361EAB279E001D6077 /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C331C321EAB15C2001D6077 /* SecondViewController.m in Sources */,
 				1C331C211EA9D19B001D6077 /* ViewController.m in Sources */,
 				1C331C1E1EA9D19B001D6077 /* AppDelegate.m in Sources */,
 				1C331C1B1EA9D19B001D6077 /* main.m in Sources */,
@@ -307,6 +329,7 @@
 				1C331C2F1EA9D19C001D6077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
