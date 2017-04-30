@@ -131,9 +131,8 @@
     [self.task cancel];
     
     [[self client]URLProtocol:self didFailWithError:[NSError errorWithDomain:NSCocoaErrorDomain code:NSUserCancelledError userInfo:nil]];
-     
-     
 }
+
 -(void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
     SecTrustRef trust = challenge.protectionSpace.serverTrust;
     SecTrustResultType result;
@@ -186,6 +185,7 @@
     
 }
 
+//刚接收到Response信息
 -(void)URLSession:(NSURLSession *)session dataTask:(nonnull NSURLSessionDataTask *)dataTask didReceiveResponse:(nonnull NSURLResponse *)response completionHandler:(nonnull void (^)(NSURLSessionResponseDisposition))completionHandler{
     NSURLCacheStoragePolicy cacheStoragePolicy;
     NSInteger statusCode;
@@ -220,7 +220,15 @@
     }
 }
 
+//为指定的请求启动验证
+- (void)URLProtocol:(NSURLProtocol *)protocol didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
+    
+}
 
-
+//为指定的请求取消验证
+- (void)URLProtocol:(NSURLProtocol *)protocol didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge{
+    
+}
 
 @end
+
