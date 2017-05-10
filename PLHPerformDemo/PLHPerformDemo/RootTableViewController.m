@@ -8,7 +8,7 @@
 
 #import "RootTableViewController.h"
 
-@interface RootTableViewController ()
+@interface RootTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
