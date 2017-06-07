@@ -14,6 +14,9 @@
 @property(nonatomic,strong)WKUserContentController* userContentController;
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) UIProgressView *progressView;
+@property (strong, nonatomic) UIBarButtonItem* customBackBarItem;  // 返回按钮
+@property (strong, nonatomic) UIBarButtonItem* closeButtonItem;   // 关闭按钮
+@property (weak, nonatomic) CALayer *progresslayer;                // 进度条
 @end
 
 @implementation PLHWKWebViewController
@@ -92,6 +95,14 @@
     //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"前进" style:UIBarButtonItemStyleDone target:self action:@selector(gofarward)];
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+}
+
 //- (void)goback {
 //    if ([self.webView canGoBack]) {
 //        [self.webView goBack];
@@ -153,7 +164,7 @@
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     NSLog(@"%s", __FUNCTION__);
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"alert" message:@"JS调用alert" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         completionHandler();
     }]];
     
@@ -166,7 +177,7 @@
     NSLog(@"%s", __FUNCTION__);
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"confirm" message:@"JS调用confirm" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         completionHandler(YES);
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {

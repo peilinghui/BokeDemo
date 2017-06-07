@@ -8,7 +8,7 @@
 
 #import "PLHUIWebViewController.h"
 #import <WebKit/WebKit.h>
-
+#import <MJRefresh/MJRefresh.h>
 @interface PLHUIWebViewController ()<UIWebViewDelegate>
 
 @property(nonatomic,strong)UIWebView *webView;
@@ -30,8 +30,20 @@
     // UIWebView 滚动的比较慢，这里设置为正常速度
     self.webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
     [self.view addSubview:self.webView];
-
+    
+    // 增加拉刷新
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(onHeader)];
+    [header setTitle:@"下拉刷新" forState:MJRefreshStatePulling];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    _webView.scrollView.mj_header = header;
 }
+
+// 刷新动作
+- (void)onHeader
+{
+    [_webView reload];
+}
+
 
 #pragma mark - UIWebViewDelegate
 

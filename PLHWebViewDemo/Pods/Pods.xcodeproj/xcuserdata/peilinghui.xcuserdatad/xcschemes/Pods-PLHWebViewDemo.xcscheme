@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7AC84FF9801650D11E98DBBF66F50B11'
+               BlueprintIdentifier = 'C8E3D525A9C8B98B57C3DA37532B7298'
                BlueprintName = 'Pods-PLHWebViewDemo'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-PLHWebViewDemo.a'>
