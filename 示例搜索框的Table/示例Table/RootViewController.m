@@ -22,7 +22,7 @@
                @"Demo":@[
                        @"PLHSearchUser",
                        @"PLHSearchPlist",
-                       @"PLHSearchCore",
+                       @"PLHSearchFB",
                        @"PLHSearchVC",
                        @"PLHOwner"
                        ],
@@ -32,7 +32,7 @@
                    @"Demo":@[
                            @"UISearchBar用NSUserDefault存储",
                            @"UISearchBar用Plist存储",
-                           @"UISearchBar用Core Data存储",
+                           @"UISearchBar用FMDB存储",
                            @"UISearchController用NSUserDefault存储",
                            @"自定义搜索框的实现"
                            ]
