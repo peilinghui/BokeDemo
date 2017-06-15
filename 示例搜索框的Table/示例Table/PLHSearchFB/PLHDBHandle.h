@@ -12,7 +12,7 @@
 
 //根据参数去取数据
 
-+(NSDictionary *)statuesWithParams:(NSDictionary *)params;
++ (NSDictionary *)statusesWithParams:(NSDictionary *)params;
 
 //存储数据到沙盒
 

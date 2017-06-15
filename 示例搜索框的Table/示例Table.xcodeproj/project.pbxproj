@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C1303991EEA480B0055F3F2 /* SelectCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1303981EEA480B0055F3F2 /* SelectCollectionLayout.m */; };
 		1C13039C1EEA4C000055F3F2 /* SelectCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C13039B1EEA4C000055F3F2 /* SelectCollectionReusableView.m */; };
+		1C4F1D281EF223FD0019AF87 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4F1D271EF223FD0019AF87 /* Image.xcassets */; };
 		1C61C7191EEABC400026DA5E /* PLHDBHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C61C7181EEABC400026DA5E /* PLHDBHandle.m */; };
 		1C61C71C1EEAEF2B0026DA5E /* PLHSearchSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C61C71B1EEAEF2B0026DA5E /* PLHSearchSectionModel.m */; };
 		1C61C71F1EEAEF7B0026DA5E /* PLHSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C61C71E1EEAEF7B0026DA5E /* PLHSearchModel.m */; };
@@ -28,7 +29,7 @@
 		1CE2F2601EE92B0F009AE9B9 /* PLHSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2F25F1EE92B0F009AE9B9 /* PLHSearchViewController.m */; };
 		1CE2F2621EE931CC009AE9B9 /* his_Btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CE2F2611EE931CC009AE9B9 /* his_Btn.png */; };
 		1CE2F2651EE955E2009AE9B9 /* PLHSearchPlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2F2641EE955E2009AE9B9 /* PLHSearchPlistViewController.m */; };
-		1CE2F2691EE95D17009AE9B9 /* PLHSrearchFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2F2681EE95D17009AE9B9 /* PLHSrearchFBViewController.m */; };
+		1CE2F2691EE95D17009AE9B9 /* PLHSearchFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE2F2681EE95D17009AE9B9 /* PLHSearchFBViewController.m */; };
 		1EE7D38AD8C6E94D43CBCAFD /* libPods-示例Table.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDC38FCEDEB4A5A5F19BCCD /* libPods-示例Table.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		1C1303981EEA480B0055F3F2 /* SelectCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCollectionLayout.m; sourceTree = "<group>"; };
 		1C13039A1EEA4C000055F3F2 /* SelectCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCollectionReusableView.h; sourceTree = "<group>"; };
 		1C13039B1EEA4C000055F3F2 /* SelectCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCollectionReusableView.m; sourceTree = "<group>"; };
+		1C4F1D271EF223FD0019AF87 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		1C61C7171EEABC400026DA5E /* PLHDBHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHDBHandle.h; sourceTree = "<group>"; };
 		1C61C7181EEABC400026DA5E /* PLHDBHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHDBHandle.m; sourceTree = "<group>"; };
 		1C61C71A1EEAEF2B0026DA5E /* PLHSearchSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHSearchSectionModel.h; sourceTree = "<group>"; };
@@ -71,8 +73,8 @@
 		1CE2F2611EE931CC009AE9B9 /* his_Btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = his_Btn.png; sourceTree = "<group>"; };
 		1CE2F2631EE955E2009AE9B9 /* PLHSearchPlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLHSearchPlistViewController.h; path = PLHSearchPlist/PLHSearchPlistViewController.h; sourceTree = "<group>"; };
 		1CE2F2641EE955E2009AE9B9 /* PLHSearchPlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLHSearchPlistViewController.m; path = PLHSearchPlist/PLHSearchPlistViewController.m; sourceTree = "<group>"; };
-		1CE2F2671EE95D17009AE9B9 /* PLHSrearchFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHSrearchFBViewController.h; sourceTree = "<group>"; };
-		1CE2F2681EE95D17009AE9B9 /* PLHSrearchFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHSrearchFBViewController.m; sourceTree = "<group>"; };
+		1CE2F2671EE95D17009AE9B9 /* PLHSearchFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHSearchFBViewController.h; sourceTree = "<group>"; };
+		1CE2F2681EE95D17009AE9B9 /* PLHSearchFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHSearchFBViewController.m; sourceTree = "<group>"; };
 		29880AD41E605DFD41782C10 /* Pods-示例Table.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-示例Table.release.xcconfig"; path = "Pods/Target Support Files/Pods-示例Table/Pods-示例Table.release.xcconfig"; sourceTree = "<group>"; };
 		7DDC38FCEDEB4A5A5F19BCCD /* libPods-示例Table.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-示例Table.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,8 +176,8 @@
 		1CE2F2661EE95B1E009AE9B9 /* PLHSearchFB */ = {
 			isa = PBXGroup;
 			children = (
-				1CE2F2671EE95D17009AE9B9 /* PLHSrearchFBViewController.h */,
-				1CE2F2681EE95D17009AE9B9 /* PLHSrearchFBViewController.m */,
+				1CE2F2671EE95D17009AE9B9 /* PLHSearchFBViewController.h */,
+				1CE2F2681EE95D17009AE9B9 /* PLHSearchFBViewController.m */,
 				1C1303971EEA480B0055F3F2 /* SelectCollectionLayout.h */,
 				1C1303981EEA480B0055F3F2 /* SelectCollectionLayout.m */,
 				1C13039A1EEA4C000055F3F2 /* SelectCollectionReusableView.h */,
@@ -188,6 +190,7 @@
 				1C61C71E1EEAEF7B0026DA5E /* PLHSearchModel.m */,
 				1C61C7201EEAFEAC0026DA5E /* PLHSearchCollectionViewCell.h */,
 				1C61C7211EEAFEAC0026DA5E /* PLHSearchCollectionViewCell.m */,
+				1C4F1D271EF223FD0019AF87 /* Image.xcassets */,
 			);
 			path = PLHSearchFB;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				1C62AB2F1EE10C42003144A7 /* Assets.xcassets in Resources */,
 				1CE2F2561EE8F6B6009AE9B9 /* search_delete@2x.png in Resources */,
 				1CE2F2541EE8F6AD009AE9B9 /* search_delete@3x.png in Resources */,
+				1C4F1D281EF223FD0019AF87 /* Image.xcassets in Resources */,
 				1C62AB2D1EE10C42003144A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +340,7 @@
 				1CE2F2591EE91E31009AE9B9 /* PLHHistoryHeaderView.m in Sources */,
 				1C61C71C1EEAEF2B0026DA5E /* PLHSearchSectionModel.m in Sources */,
 				1C61C7221EEAFEAC0026DA5E /* PLHSearchCollectionViewCell.m in Sources */,
-				1CE2F2691EE95D17009AE9B9 /* PLHSrearchFBViewController.m in Sources */,
+				1CE2F2691EE95D17009AE9B9 /* PLHSearchFBViewController.m in Sources */,
 				1CE2F2601EE92B0F009AE9B9 /* PLHSearchViewController.m in Sources */,
 				1CE2F24F1EE8E9A3009AE9B9 /* PLHSearchUserViewController.m in Sources */,
 				1CE2F2521EE8F48C009AE9B9 /* PLHHistoryTableViewCell.m in Sources */,

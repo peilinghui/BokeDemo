@@ -10,6 +10,6 @@
 
 
 
-@interface PLHSrearchFBViewController : UIViewController
+@interface PLHSearchFBViewController : UIViewController
 
 @end
