@@ -45,8 +45,8 @@
     return _contentButton;
 }
 -(void)clickBtn{
-    if ([self.selectDelegate respondsToSelector:@selector(selectButtonClick:)]) {
-        [self.selectDelegate selectButtonClick:self];
+    if ([self.selectDelegate respondsToSelector:@selector(selectButttonClick:)]) {
+        [self.selectDelegate selectButttonClick:self];
     }
 }
 @end

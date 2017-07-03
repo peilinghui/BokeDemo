@@ -33,6 +33,7 @@ UITextFieldDelegate
 @property (nonatomic,strong)NSMutableArray *searchArray;//搜索的数组
 @property (nonatomic,strong)UICollectionView *searchCollectionView;
 @property (nonatomic,strong)UITextField *searchTextField;
+@property (nonatomic, strong) UIView *searchPanelView;
 
 
 @end
@@ -44,9 +45,6 @@ UITextFieldDelegate
 
     [self prepareData];
     [self initMainView];
-   
-  
-    
 }
 
 -(void)prepareData{
@@ -187,6 +185,19 @@ UITextFieldDelegate
 {
     [self.searchTextField resignFirstResponder];
 }
+#pragma mark - UICollectionReusableViewButtonDelegate
+- (void)delectData:(SelectCollectionReusableView *)view;
+{
+    if (self.sectionArray.count > 1) {
+        [self.sectionArray removeLastObject];
+        [self.searchArray removeAllObjects];
+        [self.searchCollectionView reloadData];
+        [PLHDBHandle saveStatuses:@{} andParam:@{@"category":@"1"}];
+    }
+}
+
+
+
 #pragma mark - textField
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -219,6 +230,9 @@ UITextFieldDelegate
     self.searchTextField.text = @"";
 }
 
+
+
+
 #pragma  mark --Setter
 -(NSMutableArray *)sectionArray
 {
@@ -250,5 +264,38 @@ UITextFieldDelegate
      
     }
     return _searchTextField;
+}
+
+- (UIView *)searchPanelView {
+    if(!_searchPanelView) {
+        _searchPanelView = [[UIView alloc] init];
+        _searchPanelView.backgroundColor = [UIColor colorWithWhite:0.33 alpha:0.75];
+        [_searchPanelView.layer setCornerRadius:5];
+        _searchPanelView.hidden = YES;
+        
+        UIView *panelBg = [[UIView alloc] initWithFrame:CGRectMake(6, 3, 266, 34)];
+        panelBg.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25];
+        [_searchPanelView addSubview:panelBg];
+        
+        UIImageView *searchImg = [[UIImageView alloc] initWithFrame:CGRectMake(8, 10, 22, 22)];
+        searchImg.backgroundColor = [UIColor clearColor];
+        searchImg.image = [UIImage imageNamed:@"ico_search.png"];
+        [_searchPanelView addSubview:searchImg];
+        [_searchPanelView addSubview:self.searchTextField];
+        
+        UIButton *cancleBtn = [[UIButton alloc] initWithFrame:CGRectMake(268, 5, 46, 30)];
+        cancleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        cancleBtn.titleLabel.textColor = [UIColor whiteColor];
+        [cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
+        [cancleBtn addTarget:self action:@selector(cancelSearch) forControlEvents:UIControlEventTouchUpInside];
+        [_searchPanelView addSubview:cancleBtn];
+    }
+    return _searchPanelView;
+}
+
+- (void)cancelSearch
+{
+    self.searchTextField.text = @"";
+    [self.searchTextField resignFirstResponder];
 }
 @end

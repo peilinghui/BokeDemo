@@ -11,7 +11,7 @@
 @class PLHSearchCollectionViewCell;
 @protocol SelectCollectionCellDelegate <NSObject>
 
--(void)selectButtonClick:(PLHSearchCollectionViewCell *)cell;
+-(void)selectButttonClick:(PLHSearchCollectionViewCell *)cell;
 
 @end
 @interface PLHSearchCollectionViewCell : UICollectionViewCell
