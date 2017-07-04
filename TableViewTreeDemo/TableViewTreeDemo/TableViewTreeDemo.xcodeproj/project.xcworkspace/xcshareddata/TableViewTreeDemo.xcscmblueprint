@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C96BA12A5F1E0235B113B7B032FBADDF78BDD1B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C96BA12A5F1E0235B113B7B032FBADDF78BDD1B1" : 9223372036854775807,
+    "E58E10CF54CD065B64B8CFC5456650BF75F8EDF9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C3DA7997-225B-47AD-A1FF-144AF176E5ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C96BA12A5F1E0235B113B7B032FBADDF78BDD1B1" : "TableViewTreeDemo\/",
+    "E58E10CF54CD065B64B8CFC5456650BF75F8EDF9" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TableViewTreeDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TableViewTreeDemo\/TableViewTreeDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/peilinghui\/TableViewTreeDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C96BA12A5F1E0235B113B7B032FBADDF78BDD1B1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/peilinghui\/BokeDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E58E10CF54CD065B64B8CFC5456650BF75F8EDF9"
+    }
+  ]
+}

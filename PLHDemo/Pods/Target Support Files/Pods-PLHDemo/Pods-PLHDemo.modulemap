@@ -1,0 +1,6 @@
+framework module Pods_PLHDemo {
+  umbrella header "Pods-PLHDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
