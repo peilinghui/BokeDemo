@@ -7,28 +7,34 @@ PODS:
     - RealmSwift (~> 1.1)
   - CorePlot (2.2)
   - Masonry (1.0.2)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - Realm (1.1.0):
     - Realm/Headers (= 1.1.0)
   - Realm/Headers (1.1.0)
   - RealmSwift (1.1.0):
     - Realm (= 1.1.0)
   - SwipeView (1.3.2)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - Charts
   - Charts/Realm
   - CorePlot
   - Masonry
+  - PNChart
   - SwipeView
 
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SwipeView: bd67cfaf7760c036438446b3ccb28a3b84fce009
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 594945d5e2f94585ab05841b4ed920a95f767a04
+PODFILE CHECKSUM: e951b525f979240cd3ec3f1109b44c87d9914326
 
 COCOAPODS: 1.0.1

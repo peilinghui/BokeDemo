@@ -15,6 +15,7 @@
 #import "PLHBarChartsView.h"
 #import "PLHHorizonBarView.h"
 #import "PLHLineChartView.h"
+#import "PLHPNchartViewController.h"
 
 @interface PLHViewController ()<SwipeViewDelegate,SwipeViewDataSource>
 @property(nonatomic,strong)SwipeView *swipeView;
@@ -49,6 +50,11 @@
     btn2.frame = CGRectMake(120, 300, 40, 40);
     [self.view addSubview:btn2];
 
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn3.backgroundColor = [UIColor yellowColor];
+    [btn3 addTarget:self action:@selector(transferVC3) forControlEvents:UIControlEventTouchUpInside];
+    btn3.frame = CGRectMake(170, 300, 40, 40);
+    [self.view addSubview:btn3];
 
 //    YearReportBarView *yearView = [[YearReportBarView alloc]initWithFrame:CGRectMake(20, 300, 300, 200)];
 //    [self.view addSubview:yearView];
@@ -78,6 +84,13 @@
     PLHLineChartView *deVC = [[PLHLineChartView alloc]init];
     // [self presentViewController:demoVC animated:YES completion:nil];
     [self.navigationController pushViewController:deVC animated:YES];
+}
+
+-(void)transferVC3
+{
+    PLHPNchartViewController *pnVC = [[PLHPNchartViewController alloc]init];
+    // [self presentViewController:demoVC animated:YES completion:nil];
+    [self.navigationController pushViewController:pnVC animated:YES];
 }
 
 - (void)dealloc

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C6897321F0DE84000F91AD3 /* PLHPNchartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6897311F0DE84000F91AD3 /* PLHPNchartViewController.m */; };
 		1C77734B1F0B33A3006F455B /* PLHYearReportBarPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C77734A1F0B33A3006F455B /* PLHYearReportBarPlot.m */; };
 		1C77734E1F0B39A2006F455B /* NSMutableArray+MaxNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C77734D1F0B39A2006F455B /* NSMutableArray+MaxNumber.m */; };
 		1C7773571F0B70F6006F455B /* PLHBarChartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7773561F0B70F6006F455B /* PLHBarChartsView.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C6897301F0DE84000F91AD3 /* PLHPNchartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHPNchartViewController.h; sourceTree = "<group>"; };
+		1C6897311F0DE84000F91AD3 /* PLHPNchartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHPNchartViewController.m; sourceTree = "<group>"; };
 		1C7773491F0B33A3006F455B /* PLHYearReportBarPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLHYearReportBarPlot.h; sourceTree = "<group>"; };
 		1C77734A1F0B33A3006F455B /* PLHYearReportBarPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLHYearReportBarPlot.m; sourceTree = "<group>"; };
 		1C77734C1F0B39A2006F455B /* NSMutableArray+MaxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MaxNumber.h"; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				1C77735C1F0B7B2B006F455B /* PLHHorizonBarView.m */,
 				1C7773621F0B9AA0006F455B /* PLHLineChartView.h */,
 				1C7773631F0B9AA0006F455B /* PLHLineChartView.m */,
+				1C6897301F0DE84000F91AD3 /* PLHPNchartViewController.h */,
+				1C6897311F0DE84000F91AD3 /* PLHPNchartViewController.m */,
 			);
 			path = PLHDemo;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6897321F0DE84000F91AD3 /* PLHPNchartViewController.m in Sources */,
 				1C77734B1F0B33A3006F455B /* PLHYearReportBarPlot.m in Sources */,
 				1C77734E1F0B39A2006F455B /* NSMutableArray+MaxNumber.m in Sources */,
 				CE56D6801F06391500D44E4F /* File.swift in Sources */,

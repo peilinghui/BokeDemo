@@ -99,7 +99,7 @@
         [yVals addObject:[[BarChartDataEntry alloc] initWithX:i y:val]];
     }
     
-#pragma mark --BarChartDataSet就是Y轴的标注
+#pragma mark --BarChartDataSet就是每一个
     BarChartDataSet *set1 = nil;
     if (_chartView.data.dataSetCount > 0)
     {
@@ -117,7 +117,7 @@
         NSMutableArray *dataSets = [[NSMutableArray alloc] init];
         [dataSets addObject:set1];
         
-#pragma mark --条形图上面的文字
+#pragma mark --条形图上面的数据
         BarChartData *data = [[BarChartData alloc] initWithDataSets:dataSets];
         [data setValueFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.f]];
         

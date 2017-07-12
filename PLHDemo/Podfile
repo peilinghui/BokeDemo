@@ -10,6 +10,7 @@ pod 'Charts/Realm'
 pod 'SwipeView'
 pod 'Masonry'
 pod 'CorePlot'
+pod 'PNChart'
 
 post_install do |installer|
 
